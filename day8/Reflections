@@ -1,0 +1,7 @@
+# Reflection
+
+**The most difficult concept.** The hardest part of the course was understanding how all the pieces of a system work together: cache, replica, queue and load balancer. Each one made sense alone, but I could not see why a design needed all of them, or what happened when one failed. I overcame this by tracing a single request step by step, like GET /notes and POST /notes in my QuickNotes architecture document, and asking at each box "what problem does this solve, and what breaks if it disappears?" Doing the load estimates also helped, because the numbers showed why a read-heavy app needs caching and replicas.
+
+**What I would improve.** In my capstone, I would improve how errors and failures are handled. The feedback pointed out that I described the happy path well, but I should say more about what happens when things go wrong: expired logins, a replica that falls behind, or a queue that backs up. I would add a short failure scenario for each component and test those cases in the API client, not only in the documents.
+
+**What I will learn next.** I want to build a real backend instead of a design on paper. My next step is learning Node.js with Express and PostgreSQL, so I can implement endpoints like the ones I designed, write real transactions, and see for myself how a constraint stops two people from taking the same row. After that I will learn authentication and deployment, so that my projects can go online and be used by real people.
